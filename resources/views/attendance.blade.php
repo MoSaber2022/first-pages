@@ -5,20 +5,28 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<header>
-		<nav>
-			<div class="logo">
-            <P>Software industry and Multimedia</P>    
-            </div>
-			<ul>
-				<li><a href="{{Route("myhome")}}">Home</a></li>
-				<li><a href="{{Route("profile")}}">Profile</a></li>
-				<li><a href="{{Route("courses")}}">Courses</a></li>
-				<li><a href="{{Route("attendance")}}">Attendance</a></li>
-                <li><a href="{{Route("about")}}">about us</a></li>
-			</ul>
-		</nav>
-	</header>
+ <!-- start header -->
+ <div class="header">
+    
+    <div class="container">
+        
+    <h2 class="co" >SIM</h2>
+      <img class="logo" src="iamge/logo.png" alt="">
+      <div class="links">
+        <span class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <ul>
+		<li><a href="{{Route("myhome")}}">My Home</a></li>
+		<li><a href="{{Route("profile")}}">Profile</a></li>
+		<li><a href="{{Route("courses")}}">Courses</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End header -->
 	<main>
 		<h1>Attendance System</h1>
         <table>
@@ -57,9 +65,105 @@
 			</tbody>
 		</table>
 	</main>
+	<div class="footer">&copy; SIM <span>Studens</span> All Right Reserved</div>
+
 </body>
 </html>
 <style>
+	.co{
+    color:white;
+}
+.header {
+    
+padding: 20px;
+}
+.header .container {
+    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  width: 60px;
+}
+.header .links {
+position: relative;
+}
+.header .links:hover .icon span:nth-child(2) {
+width: 100%;
+}
+.header .links .icon {
+width: 30px;
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-end;
+}
+.header .links .icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.header .links .icon span:first-child {
+  width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: 0.3s;
+}
+.header .links .icon span:last-child {
+  width: 100%;
+}
+.header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1;
+}
+.header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+.header .links:hover ul {
+  display: block;
+}
+.header .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+.header .links ul li a:hover {
+  padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+.footer {
+	margin-top:310px;
+  background-color: #023e8a;
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.footer span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+
     nav {
 	display: flex;
 	justify-content: space-between;
@@ -91,10 +195,12 @@ nav a:hover {
 }
 
 body {
+	margin-top: 10px;
+	margin : 0px;
 
-	margin: 0;
-	font-family: Arial, sans-serif;
-  background: #2370ED 50%;
+font-family: Arial, sans-serif;
+font-weight: bold;
+background: #2370ED 50%;
 }
 
 header {

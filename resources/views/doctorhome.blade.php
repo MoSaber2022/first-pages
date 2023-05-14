@@ -6,27 +6,31 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Main template css file -->
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="Dr_Home_Style.css">
 <!-- Google fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com%22%3E/
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 <!-- website title -->
-<title>Profile</title>
+<title>Dr Home</title>
+</head>
 <style>
-	.tt{
-		margin-bottom:100px;
-	}
     body {
-		margin-top: 5px;
+        margin-top: 10px;
 
 font-family: Arial, sans-serif;
 font-weight: bold;
-background: #2370ED 50%;
+        margin:0px;
     background: #2370ED 50%;
-    margin: 0;
-		padding: 0;
+}
+.footer {
+    margin-top:310px;
+  background-color: #023e8a;
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
 }
 .co{
     color:white;
@@ -108,81 +112,53 @@ justify-content: flex-end;
 .header .links ul li:not(:last-child) a {
   border-bottom: 1px solid #ddd;
 }
-.footer {
-	margin-top:50px;
-  background-color: #023e8a;
-  color: white;
-  padding: 30px 10px;
-  text-align: center;
-  font-size: 18px;
-}
+
 .footer span {
   font-weight: bold;
   color: var(--main-color);
 }
-
-  h1 {
-    color:white;  
-		text-align: center;
-		margin-top: 50px;
-		}
-  table {
-			margin: auto;
-			border-collapse: collapse;
-			border-spacing: 0;
-			width: 50%;
-			border: 1px solid #ddd;
-			background-color: white;
-		}
-  th, td {
-			text-align: left;
-			padding: 16px;
-			border-bottom: 1px solid #ddd;
-		}
-  tr:nth-child(even) {
-			background-color: #f2f2f2
-		}
-
-  .circle {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background-image: url('https://www.w3schools.com/w3images/avatar2.png');
-      background-size: cover;
-      margin-left:auto; 
-      margin-right:auto;
-  }
-  nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url('https://www.w3schools.com/w3images/avatar2.png');
+    background-size: cover;
+    margin-left:auto; 
+    margin-right:auto;
 }
 
-nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.big{
+    display: inline-block;
+
+}
+.text{
+    display: block;
+    color: aliceblue;
+}
+.all{
+    display: flex;
+    float: left;
+}
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button{
+    padding-top: 10em;
 }
 
-nav li {
-	display: inline-block;
-	margin-right: 20px;
-}
-
-nav a {
-	color: #fff;
-	text-decoration: none;
-}
-
-nav a:hover {
-	text-decoration: underline;
-}
 </style>
-</head>
-
 <body>
- <!-- start header -->
- <div class="header">
+     <!-- start header -->
+  <div class="header">
     
     <div class="container">
         
@@ -195,51 +171,30 @@ nav a:hover {
           <span></span>
         </span>
         <ul>
-		<li><a href="{{Route("myhome")}}">My Home</a></li>
-		<li><a href="{{Route("courses")}}">Courses</a></li>
-          <li><a href="{{Route("attendance")}}">My Attendance</a></li>
+        <li><a href="{{Route("profile")}}">Profile</a></li>
+        <li><a href="#">Materials</a></li>
         </ul>
       </div>
     </div>
   </div>
   <!-- End header -->
-    <!-- <div class="image">
-        <img src="porfolio pic.png" alt="Image">
-    </div> -->
-
-<div class="tt">
-    <h1>Your Profile</h1>
+    <center>
+        <div class="big">
+<div class="all">
     <div class="circle"></div>
-	<table>
-	  <tr>
-	    <th>Name:</th>
-	    <td>John Doe</td>
-	  </tr>
-	  <tr>
-	    <th>Uni ID:</th>
-	    <td>1234567</td>
-	  </tr>
-	  <tr>
-	    <th>Gender:</th>
-	    <td>Male</td>
-	  </tr>
-	  <tr>
-	    <th>University Email:</th>
-	    <td>johndoe@alexu.edu.eg</td>
-	  </tr>
-    <tr>
-	    <th>Mobile num:</th>
-	    <td>+20 1115845115</td>
-	  </tr>
-    <tr>
-	    <th>National ID:</th>
-	    <td>30102010115213</td>
-	  </tr>
-    <tr>
-	</table>
+    <div class="text">
+    <h1>john manner</h1>
+    <h3>Doctor</h3>
+</div>
 </div>
 
-	<div class="footer">&copy; SIM <span>Studens</span> All Right Reserved</div>
+<div class="button">
+<button>Add Material</button>
+</div>
+</div>
+</center>
+<div class="footer">&copy; SIM <span>Studens</span> All Right Reserved</div>
+
 
 </body>
 

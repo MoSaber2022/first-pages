@@ -15,6 +15,86 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+.co{
+    color:white;
+}
+.header {
+    
+padding: 20px;
+}
+.header .container {
+    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  width: 60px;
+}
+.header .links {
+position: relative;
+}
+.header .links:hover .icon span:nth-child(2) {
+width: 100%;
+}
+.header .links .icon {
+width: 30px;
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-end;
+}
+.header .links .icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.header .links .icon span:first-child {
+  width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: 0.3s;
+}
+.header .links .icon span:last-child {
+  width: 100%;
+}
+.header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1;
+}
+.header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+.header .links:hover ul {
+  display: block;
+}
+.header .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+.header .links ul li a:hover {
+  padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
 .about-us{
   height: 100vh;
   width: 100%;
@@ -72,6 +152,18 @@ span{
   background: #000;
   border: 1px solid #4070f4;
 }
+.footer {
+  margin-top:170px;
+  background-color: #023e8a;
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.footer span {
+  font-weight: bold;
+  color: var(--main-color);
+}
 nav {
     margin-top: 25px;
 	display: flex;
@@ -104,20 +196,28 @@ body{
   </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-            <P style="color: #ececec;">Software industry and Multimedia</P>    
-            </div>
-            <ul>
-            <li><a href="{{Route("myhome")}}">Home</a></li>
-            <li><a href="{{Route("profile")}}">profile</a></li>
-            <li><a href="{{Route("courses")}}">courses</a></li>
-            <li><a href="{{Route("attendance")}}">attendance</a></li>
-            <li><a href="{{Route("about")}}">about us</a></li>
-            </ul>
-        </nav>
-    </header>
+       <!-- start header -->
+  <div class="header">
+    
+    <div class="container">
+        
+    <h2 class="co" >SIM</h2>
+      <img class="logo" src="iamge/logo.png" alt="">
+      <div class="links">
+        <span class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <ul>
+          <li><a href="{{Route("home")}}">Home</a></li>
+          <li><a href="{{Route("signin")}}">Log in</a></li>
+          <li><a href="{{Route("signuppage")}}">Sign up</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End header -->
 
     <div class="about">
       <!--<img src="girl.png" class="pic">-->
@@ -131,6 +231,8 @@ body{
       </div>
     </div>
   </section>
+  <div class="footer">&copy; SIM <span>Studens</span> All Right Reserved</div>
+
 </body>
 </html>
 

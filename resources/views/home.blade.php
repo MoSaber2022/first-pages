@@ -5,36 +5,130 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<header>
-		<nav>
-			<div class="logo">
-            <P>Software industry and Multimedia</P>    
-            </div>
-			<ul>
-				<li><a href="{{Route("home")}}">Home</a></li>
-				<li><a href="{{Route("signin")}}">Login</a></li>
-				<li><a href="{{Route("signuppage")}}">Sign Up</a></li>
-                <li><a href="{{Route("about")}}">about us</a></li>
-			</ul>
-		</nav>
-	</header>
-
-	<main>
-		<section class="welcome">
-			<h1>Welcome to our College</h1>
+	<div>
+	   <!-- start header -->
+	   <div class="header">
+    
+    <div class="container">
+        
+    <h2 class="co" >SIM</h2>
+      <img class="logo" src="iamge/logo.png" alt="">
+      <div class="links">
+        <span class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <ul>
+          <li><a href="{{Route("signin")}}">Log in</a></li>
+          <li><a href="{{Route("signuppage")}}">Sign Up</a></li>
+          <li><a href="{{Route("about")}}">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End header -->
+</div>
+<div  class="welcome">
+		
+			<div>
+				<h1>Welcome to our College</h1>
 			<p>We believe there is nothing important than education.</p>
-			<a href="#" class="button">Know more about us</a>
-		</section>
+			<a href="#" class="button">Know more about us</a> 
+		</div>
+			<img class="rr" src="/img/coding.png" width="500" height="500" alt="College Image">
+
 
 		
-			<img src="/img/coding.png" width="500" height="500" alt="College Image">
-		</section>
-	</main>
+</div>
+
+<div class="footer">&copy; SIM <span>Studens</span> All Right Reserved</div>
 </body>
 </html>
 <style>
-{
-	box-sizing: border-box;
+
+.rr{
+	margin-left:400px ;
+}
+.co{
+    color:white;
+}
+.header {
+    
+padding: 20px;
+}
+.header .container {
+    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  width: 60px;
+}
+.header .links {
+position: relative;
+}
+.header .links:hover .icon span:nth-child(2) {
+width: 100%;
+}
+.header .links .icon {
+width: 30px;
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-end;
+}
+.header .links .icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.header .links .icon span:first-child {
+  width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: 0.3s;
+}
+.header .links .icon span:last-child {
+  width: 100%;
+}
+.header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1;
+}
+.header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+.header .links:hover ul {
+  display: block;
+}
+.header .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+.header .links ul li a:hover {
+  padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
 }
 
 body {
@@ -42,6 +136,13 @@ body {
 	font-family: Arial, sans-serif;
     font-weight: bold;
     background: #2370ED 50%;
+}
+.footer {
+  background-color: #023e8a;
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
 }
 .logo{
     font-size:22px; 
@@ -83,21 +184,10 @@ nav a:hover {
 
 }
 
-.logo img {
-	height: 50px;
-}
-
-main {
-	max-width: 1200px;
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-}
-
 .welcome {
 	padding: 50px;
-	flex: 1;
+	display:flex;
+
 }
 
 .welcome h1 {
@@ -124,11 +214,4 @@ main {
 	background-color: black;
 }
 
-.image {
-	flex: 1;
-}
-
-.image img {
-	width: 150%;
-}
 </style>

@@ -27,9 +27,10 @@
 		</section>
 
 		
-			<img src="/img/coding.png width="500" height="500" alt="College Image">
+			<img src="/img/Login.png width="500" height="500" alt="College Image">
 		</section>
 	</main>
+	
 </body>
 </html>
 <style>

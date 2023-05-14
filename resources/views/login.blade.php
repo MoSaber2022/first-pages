@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+
+
   <!-- Design by foolishdeveloper.com -->
     <title>Glassmorphism login Form Tutorial in html css</title>
- 
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
@@ -16,9 +20,108 @@
     margin: 0;
     box-sizing: border-box;
 }
+.co{
+    color:white;
+}
+.header {
+    
+padding: 20px;
+}
+.header .container {
+    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  width: 60px;
+}
+.header .links {
+position: relative;
+}
+.header .links:hover .icon span:nth-child(2) {
+width: 100%;
+}
+.header .links .icon {
+width: 30px;
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-end;
+}
+.header .links .icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.header .links .icon span:first-child {
+  width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: 0.3s;
+}
+.header .links .icon span:last-child {
+  width: 100%;
+}
+.header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  position: absolute;
+  right: 0;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+  z-index: 1;
+}
+.header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+.header .links:hover ul {
+  display: block;
+}
+.header .links ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+.header .links ul li a:hover {
+  padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #ddd;
+}
+
 body{
+    margin-top: 10px;
+
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     background: #2370ED 50%;
 }
+
+.footer {
+  background-color: #023e8a;
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.footer span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+
 .background{
     width: 430px;
     height: 520px;
@@ -54,10 +157,9 @@ form{
     height: 520px;
     width: 400px;
     background-color: rgba(255,255,255,0.13);
-    position: absolute;
+    margin-top:350px;
+    margin-left:480px;
     transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
@@ -170,27 +272,47 @@ nav a:hover {
 .sa{
     color : black;
 }
+.left{
+float:right;   
+margin-right:30px; 
+margin-top:80px;
+}
     </style>
 </head>
 <body>
-<header>
-		<nav>
-			<div class="logo">
-            <P>Software industry and Multimedia</P>    
-            </div>
-			<ul>
-				<li><a href="{{Route("home")}}">Home</a></li>
-				<li><a href="{{Route("signin")}}">Login</a></li>
-				<li><a href="{{Route("signuppage")}}">Sign Up</a></li>
-                <li><a href="{{Route("about")}}">about us</a></li>
-			</ul>
-		</nav>
-	</header>
 
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
+    <!-- start header -->
+  <div class="header">
+    
+    <div class="container">
+        
+    <h2 class="co" >SIM</h2>
+      <img class="logo" src="iamge/logo.png" alt="">
+      <div class="links">
+        <span class="icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <ul>
+          <li><a href="{{Route("home")}}">Home</a></li>
+          <li><a href="{{Route("signuppage")}}">Sign Up</a></li>
+          <li><a href="{{Route("about")}}">About Us</a></li>
+        </ul>
+      </div>
     </div>
+  </div>
+  <!-- End header -->
+		
+    </div>
+    <div class="left"> 
+    <section class="welcome">
+		
+			<img src="/img/Login.png" width="500" height="500" alt="College Image">
+		</section>
+</div>
+
+ <div>
     <form>
         <h3>Login Here</h3>
 
@@ -204,5 +326,11 @@ nav a:hover {
 
        <a href="#">Forgot Password?</a>
     </form>
+</div>
+<!-- Start Footer -->
+<div class="footer">&copy; SIM <span>Studens</span> All Right Reserved</div>
+<!-- End Footer -->
+
+
 </body>
 </html>

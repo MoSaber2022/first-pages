@@ -61,4 +61,8 @@ class HomeController extends Controller
     {
         return view('about');
     }
+    public function doctor()
+    {
+        return view('doctorhome');
+    }
 }
