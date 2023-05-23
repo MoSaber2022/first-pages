@@ -23,13 +23,14 @@
 
 body{
   background-color:#E4E9F7;
-    margin-top: 10px;
+    margin-top: 0px;
 
     font-family: Arial, sans-serif;
     font-weight: bold;
 }
 
 form{
+	height:10px;
   color:black;
   background-color:#b8c2cf;
 
@@ -43,7 +44,6 @@ form{
   padding: 30px 10px;
   text-align: center;
   font-size: 18px;
-  margin-top:50px;
 }
 .footer span {
   font-weight: bold;
@@ -76,7 +76,7 @@ form{
     bottom: -80px;
 }
 form{
-    height: 520px;
+    height: 570px;
     width: 400px;
     margin-top:350px;
     margin-left:480px;
@@ -470,6 +470,7 @@ color:white;
 }
 .flexform{
   display:flex;
+
 }
 .imgclass{
   padding-top:100px;
@@ -484,114 +485,28 @@ color:white;
 li a i{
   color:white;
 }
-.tt{
-		margin-bottom:100px;
-	}
-    body {
-		margin-top: 5px;
-
-font-family: Arial, sans-serif;
-font-weight: bold;
-background: #2370ED 50%;
-    background: #DDE7F3 ;
-    margin: 0;
-		padding: 0;
+.fle{
+	display:flex;
 }
-
-  h1 {
-    color:black;  
-		text-align: center;
-		margin-top: 50px;
-		}
-  table {
-    
-			margin: auto;
-			border-collapse: collapse;
-			border-spacing: 0;
-			width: 50%;
-			border: 1px solid #ddd;
-			background-color: white;
-		}
-  th, td {
-			text-align: left;
-			padding: 16px;
-			border-bottom: 1px solid #ddd;
-		}
-  tr:nth-child(even) {
-			background-color: #f2f2f2
-		}
-
-  .circle {
-
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background-image: url('https://www.w3schools.com/w3images/avatar2.png');
-      background-size: cover;
-      margin-left:auto; 
-      margin-right:auto;
-      margin-top:10px;
-  }
- .ttt{
-  margin-top:40px;
- }
- .about-us{
-  height: 100vh;
-  width: 100%;
-  padding: 90px 0;
-  background: #ddd;
+.rrr{
+	width:25px;
+		margin-right: 0px;
 }
-.pic{
-  height: auto;
-  width:  302px;
+.rr{
+	width:25px;
+	margin-left: 20px;
 }
-.about{
-  width: 1130px;
-  max-width: 85%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.text{
-  width: 540px;
-}
-.text h2{
-  font-size: 90px;
-  font-weight: 600;
-  margin-bottom: 10px;
+.ffd{
+	display:flex;
 
 }
-.text h5{
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 20px;
+.pp{
+	padding-top:30px;
 }
-span{
-  color: #4070f4;
+.mm{
+margin-top:20px;
 }
-.text p{
-  font-size: 18px;
-  line-height: 25px;
-  letter-spacing: 1px;
-}
-.data{
-  margin-top: 30px;
-}
-.hire{
-  font-size: 18px;
-  background: black;
-  color:white;
-  text-decoration: none;
-  border: none;
-  padding: 8px 25px;
-  border-radius: 6px;
-  transition: 0.5s;
-}
-.hire:hover{
-  background: #000;
-  border: 1px solid #4070f4;
-}
+
     </style>
     <div class="sidebar">
       <div class="logo-details">
@@ -604,67 +519,61 @@ span{
      
       
         <li>
-          <a href="{{Route("myhome")}}">
-          <i class="fa-solid fa-house"></i>
-                                <span class="links_name">Home</span>
+          <a href="{{Route("signin")}}">
+          <i class="fa-solid fa-right-to-bracket"></i>          
+            <span class="links_name">Login</span>
           </a>
-          <span class="tooltip">Home</span>
+          <span class="tooltip">Login</span>
         </li>
         <li>
-          <a href="{{Route("profile")}}">
-          <i class="fa-solid fa-user"></i>
-                      <span class="links_name">Profile</span>
+          <a href="{{Route("breifabout")}}">
+          <i class="fa-sharp fa-solid fa-bookmark"></i>
+             <span class="links_name">About us</span>
           </a>
-          <span class="tooltip">Profile</span>
+          <span class="tooltip">About us</span>
         </li>
         <li>
-          <a href="{{Route("courses")}}">
-        <i class="fa-solid fa-book"></i>
-                            <span class="links_name">Courses</span>
-          </a>
-          <span class="tooltip">Courses</span>
-        </li>
-        <li>
-          <a href="{{Route("attendance")}}">
-          <i class="fa-solid fa-clipboard-user"></i>
-                      <span class="links_name">My Attendance</span>
-          </a>
-          <span class="tooltip">My Attendance</span>
-        </li>
-        <li>
-          <a href="{{Route("contactlogin")}}">
+          <a href="{{Route("contactus")}}">
           <i class="fa-solid fa-address-book"></i>
                 <span class="links_name">Contact us</span>
           </a>
           <span class="tooltip">Contact us</span>
         </li>
-        <li class="profile">
-          <div class="profile-details">
-               <div class="name_job">
-              <div class="name">John Doe</div>
-              <div class="job">Student</div>
-            </div>
-          </div>
-         <a href ="{{Route("signin")}}"><i class="bx bx-log-out" id="log_out"></i></a>
-        </li>
+        
+        
       </ul>
-        
-        
-    
     </div>
     <section class="home-section">
-    <div class="about">
-      <!--<img src="girl.png" class="pic">-->
-      <div class="text">
-        <h2 style="color: black;">About Us</h2>
-        <h5>SIM Registration <span>Website</span></h5>
-          <p>The Department of SIM is a unique group of faculty, visiting researchers, students and educational programs that provide a world-class research environment that goes well beyond the core areas of computer science</p>
 
-  <br>
-         <p > Computer science is the study of computers and computing, including their theoretical and algorithmic foundations, hardware and software, and their uses for processing information!</p>
-        
-      </div>
+<div class="flexform">
+ <div class="FormLogin">
+    <form class="froms">
+        <h3>Login</h3>
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Email or Phone" id="username">
+		<label for="username">Email</label>
+        <input type="text" placeholder="Email or Phone" id="username">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password">
+
+        <a href="#" style="color:black; margin-top:10px;">Forgot Password?</a>
+
+		
+
+
+        <a href="{{Route("myhome")}}"> <button type="button" class="bbt">Login</button></a>
+
+    </form>
+</div>
+<div class="imgclass">
+<section class="welcome">
+		
+			<img  src="/img/Login.png" width="500" height="500" alt="College Image">
+		</section>
     </div>
+</div>
 
     </section>
 
@@ -694,11 +603,6 @@ function menuBtnChange() {
 
 
     </script>
-    
-
-   
-
     <div class="footer">&copy; SIM <span>Studens</span> All Right Reserved</div>
-
-</body>
+  </body>
 </html>
