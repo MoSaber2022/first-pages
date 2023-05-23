@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form - Alert Message</title>
+    <link rel="stylesheet" href="style.css">
 
-
-
-
-  <!-- Design by foolishdeveloper.com -->
-    <title>Login</title>
-
+    <!-- font Awesome CDN -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <!--Stylesheet-->
-    <style media="screen">
-      *,
-*:before,
-*:after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
 
+    <script src="https://kit.fontawesome.com/85a8aaf291.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
 body{
-  background-color:#E4E9F7;
+    background-color:#E4E9F7;
     margin-top: 10px;
 
     font-family: Arial, sans-serif;
     font-weight: bold;
 }
-
-form{
-  color:black;
-  background-color:#b8c2cf;
-
-}
-.hr{
-  color:black;
+.container{
+    width: 700px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
 }
 .footer {
   background-color: #11101D;
@@ -43,178 +49,12 @@ form{
   padding: 30px 10px;
   text-align: center;
   font-size: 18px;
-  margin-top:50px;
+  margin-top:800px;
 }
 .footer span {
   font-weight: bold;
   color: var(--main-color);
 }
-
-
-.background{
-    width: 430px;
-    height: 520px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
-}
-.background .shape{
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-}
-
-.shape:last-child{
-    background: linear-gradient(
-        to right,
-        #ff512f,
-        #f09819
-    );
-    right: -30px;
-    bottom: -80px;
-}
-form{
-    height: 520px;
-    width: 400px;
-    margin-top:350px;
-    margin-left:480px;
-    transform: translate(-50%,-50%);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
-}
-form *{
-    font-family: 'Poppins',sans-serif;
-    letter-spacing: 0.5px;
-    outline: none;
-    border: none;
-}
-form h3{
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 42px;
-    text-align: center;
-}
-
-label{
-    display: block;
-    margin-top: 30px;
-    font-size: 16px;
-    font-weight: 500;
-}
-input{
-    display: block;
-    height: 50px;
-    width: 100%;
-    border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
-    font-size: 14px;
-    font-weight: 300;
-}
-::placeholder{
-    color: #e5e5e5;
-}
-button{
-    margin-top: 50px;
-    width: 100%;
-    background-color: #ffffff;
-    color: #080710;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.social{
-  margin-top: 30px;
-  display: flex;
-}
-.social div{
-  background: red;
-  width: 150px;
-  border-radius: 3px;
-  padding: 5px 10px 10px 5px;
-  background-color: rgba(255,255,255,0.27);
-  color: #eaf0fb;
-  text-align: center;
-}
-.social div:hover{
-  background-color: rgba(255,255,255,0.47);
-}
-.social .fb{
-  margin-left: 25px;
-}
-.social i{
-  margin-right: 4px;
-}
-.sds{
-    margin-top:500000000px;
-}
-.logo{
-    color:white;
-    font-size:22px;    
-}
-nav {
-    font-size:22px;   
-    margin-top :25px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-nav ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-nav li {
-	display: inline-block;
-	margin-right: 20px;
-}
-
-nav a {
-	color: #fff;
-	text-decoration: none;
-}
-
-nav a:hover {
-	text-decoration: underline;
-    background-color: black;
-
-}
-.sa{
-    color : black;
-}
-.left{
-float:right;   
-margin-right:30px; 
-margin-top:80px;
-}
-    </style>
-    <script src="https://kit.fontawesome.com/85a8aaf291.js" crossorigin="anonymous"></script>
-
-</head>
-<body>
-<!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Responsive Sidebar Menu HTML CSS | CodingNepal</title>
-    <!-- Boxicons CDN Link -->
-    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  
-  <body>
-    <style>
-      /* Google Font Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
@@ -440,104 +280,149 @@ color:white;
   width: 50px;
   background: none;
 }
-.home-section{
-  position: relative;
-  min-height: 100vh;
-  top: 0;
-  left: 78px;
-  width: calc(100% - 78px);
-  transition: all 0.5s ease;
-  z-index: 2;
+.box{
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.sidebar.open ~ .home-section{
-  left: 250px;
-  width: calc(100% - 250px);
+h3{
+    font-size: 35px;
+    margin: 15px;
 }
-.home-section .text{
-  display: inline-block;
-  color: #11101d;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 18px
+.name{
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
 }
-@media (max-width: 420px) {
-  .sidebar li .tooltip{
+.name i{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #bbb;
+}
+.name input{
+    width: 100%;
+    padding: 20px 60px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #eee;
+    border-radius: 40px;
+}
+.name input::placeholder{
+    color: #bbb;
+    font-weight: 500;
+}
+.email{
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+.email i{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #bbb;
+}
+.email input{
+    width: 100%;
+    padding: 20px 60px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #eee;
+    border-radius: 40px;
+}
+.email input::placeholder{
+    color: #bbb;
+    font-weight: 500;
+}
+.message-box{
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+.message-box i{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #bbb;
+}
+.message-box textarea{
+    width: 100%;
+    padding: 20px 60px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #eee;
+    border-radius: 40px;
+}
+.message-box textarea::placeholder{
+    color: #bbb;
+    font-weight: 500;
+}
+
+.button{
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.button button{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #11101D;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.message{
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+.message .success{
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
     display: none;
-  }
 }
-.fa-sign-in{
-  color:black;
+.message .danger{
+    font-size: 20px;
+    color: red;
+    position: absolute;
+    transition: .3s;
+    animation: buttons .3s linear;
+    display: none;
 }
-.flexform{
-  display:flex;
-}
-.imgclass{
-  padding-top:100px;
-}
-.bbt{
- background-color: #11101D;
- color:white;
-}
-.red-color {
-        color:red;
+@keyframes buttons{
+    0%{
+        transform: scale(0.1);
     }
-li a i{
-  color:white;
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
-.tt{
-		margin-bottom:100px;
-	}
-    body {
-		margin-top: 5px;
-
-font-family: Arial, sans-serif;
-font-weight: bold;
-background: #2370ED 50%;
-    background: #DDE7F3 ;
-    margin: 0;
-		padding: 0;
-}
-
-  h1 {
-    color:black;  
-		text-align: center;
-		margin-top: 50px;
-		}
-  table {
-    
-			margin: auto;
-			border-collapse: collapse;
-			border-spacing: 0;
-			width: 50%;
-			border: 1px solid #ddd;
-			background-color: white;
-		}
-  th, td {
-			text-align: left;
-			padding: 16px;
-			border-bottom: 1px solid #ddd;
-		}
-  tr:nth-child(even) {
-			background-color: #f2f2f2
-		}
-
-  .circle {
-
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background-image: url('https://www.w3schools.com/w3images/avatar2.png');
-      background-size: cover;
-      margin-left:auto; 
-      margin-right:auto;
-      margin-top:10px;
-  }
- .ttt{
-  margin-top:40px;
- }
-
-    </style>
-    <div class="sidebar">
+</style>
+<body>
+<div class="sidebar">
       <div class="logo-details">
       <div class="logo_name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SIM</div>
         <i class="bx bx-menu" id="btn"></i>
@@ -547,12 +432,19 @@ background: #2370ED 50%;
         
      
       
-        <li>
+      <li>
           <a href="{{Route("myhome")}}">
           <i class="fa-solid fa-house"></i>
                                 <span class="links_name">Home</span>
           </a>
           <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="{{Route("profile")}}">
+          <i class="fa-solid fa-user"></i>
+                            <span class="links_name">Profile</span>
+          </a>
+          <span class="tooltip">Profile</span>
         </li>
         <li>
           <a href="{{Route("courses")}}">
@@ -569,18 +461,11 @@ background: #2370ED 50%;
           <span class="tooltip">My Attendance</span>
         </li>
         <li>
-          <a href="{{Route("about")}}">
+          <a href="{{Route("breifabout")}}">
           <i class="fa-sharp fa-solid fa-bookmark"></i>
              <span class="links_name">About us</span>
           </a>
           <span class="tooltip">About us</span>
-        </li>
-        <li>
-          <a href="{{Route("contactlogin")}}">
-          <i class="fa-solid fa-address-book"></i>
-                <span class="links_name">Contact us</span>
-          </a>
-          <span class="tooltip">Contact us</span>
         </li>
         <li class="profile">
           <div class="profile-details">
@@ -593,46 +478,61 @@ background: #2370ED 50%;
         </li>
       </ul>
         
-        
-    
+      </ul>
     </div>
-    <section class="home-section">
-    <div class="tt">
-    <h1 >Your Profile</h1>
-    <div class="circle"></div>
-	<table class="ttt">
-	  <tr>
-	    <th>Name:</th>
-	    <td>John Doe</td>
-	  </tr>
-	  <tr>
-	    <th>Uni ID:</th>
-	    <td>1234567</td>
-	  </tr>
-	  <tr>
-	    <th>Gender:</th>
-	    <td>Male</td>
-	  </tr>
-	  <tr>
-	    <th>University Email:</th>
-	    <td>johndoe@alexu.edu.eg</td>
-	  </tr>
-    <tr>
-	    <th>Mobile num:</th>
-	    <td>+20 1115845115</td>
-	  </tr>
-    <tr>
-	    <th>National ID:</th>
-	    <td>30102010115213</td>
-	  </tr>
-    <tr>
-	</table>
-</div>
+    <div class="container">
+        <div class="box">
+            <h3>Get in Touch</h3>
+            <div class="name">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Name" id="name">
+            </div>
+            <div class="email">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Email" id="email">
+            </div>
+            <div class="message-box">
+                <textarea id="msg" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+            <div class="button">
+                <button id="send" onclick="message()">Send</button>
+            </div>
+            <div class="message">
+                <div class="success" id="success">Your Message Successfully Sent!</div>
+                <div class="danger" id="danger">Feilds Can't be Empty!</div>
+            </div>
+        </div>
+    </div>
 
-    </section>
 
     <script>
+        function message(){
+    var Name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var msg = document.getElementById('msg');
+    const success = document.getElementById('success');
+    const danger = document.getElementById('danger');
 
+    if(Name.value === '' || email.value === '' || msg.value === ''){
+        danger.style.display = 'block';
+    }
+    else{
+        setTimeout(() => {
+            Name.value = '';
+            email.value = '';
+            msg.value = '';
+        }, 2000);
+
+        success.style.display = 'block';
+    }
+
+
+    setTimeout(() => {
+        danger.style.display = 'none';
+        success.style.display = 'none';
+    }, 4000);
+
+}
 let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");
 
@@ -655,13 +555,8 @@ function menuBtnChange() {
  }
 }
 
-
     </script>
-    
-
-   
-
-    <div class="footer">&copy; SIM <span>Studens</span> All Right Reserved</div>
+        <div class="footer">&copy; SIM <span>Studens</span> All Right Reserved</div>
 
 </body>
 </html>

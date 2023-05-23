@@ -61,8 +61,24 @@ class HomeController extends Controller
     {
         return view('about');
     }
+    public function breifabout()
+    {
+        return view('breifabout');
+    }
     public function doctor()
     {
         return view('doctorhome');
+    }
+    public function contactus()
+    {
+        return view('contactus');
+    }
+    public function contactlogin()
+    {
+        return view('contactlogin');
+    }
+    public function course1()
+    {
+        return view('course1');
     }
 }

@@ -1,119 +1,548 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  body{
-    margin:0px;
+
+
+
+
+  <!-- Design by foolishdeveloper.com -->
+    <title>Login</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color:#E4E9F7;
     margin-top: 10px;
 
     font-family: Arial, sans-serif;
     font-weight: bold;
-    background: #2370ED 50%;
 }
-.co{
-    color:white;
+
+form{
+  color:black;
+  background-color:#b8c2cf;
+
 }
-.header {
-    
-padding: 20px;
+.hr{
+  color:black;
 }
-.header .container {
-    
+.footer {
+  background-color: #11101D;
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+  margin-top:50px;
+}
+.footer span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+form{
+    height: 520px;
+    width: 400px;
+    margin-top:350px;
+    margin-left:480px;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.social{
+  margin-top: 30px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-.header .logo {
-  width: 60px;
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
 }
-.header .links {
-position: relative;
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
 }
-.header .links:hover .icon span:nth-child(2) {
-width: 100%;
+.social .fb{
+  margin-left: 25px;
 }
-.header .links .icon {
-width: 30px;
-display: flex;
-flex-wrap: wrap;
-justify-content: flex-end;
+.social i{
+  margin-right: 4px;
 }
-.header .links .icon span {
-  background-color: #333;
-  margin-bottom: 5px;
-  height: 2px;
+.sds{
+    margin-top:500000000px;
 }
-.header .links .icon span:first-child {
-  width: 100%;
+.logo{
+    color:white;
+    font-size:22px;    
 }
-.header .links .icon span:nth-child(2) {
-  width: 60%;
-  transition: 0.3s;
+nav {
+    font-size:22px;   
+    margin-top :25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
-.header .links .icon span:last-child {
-  width: 100%;
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
-.header .links ul {
-  list-style: none;
+
+nav li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration: underline;
+    background-color: black;
+
+}
+.sa{
+    color : black;
+}
+.left{
+float:right;   
+margin-right:30px; 
+margin-top:80px;
+}
+    </style>
+    <script src="https://kit.fontawesome.com/85a8aaf291.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Sidebar Menu HTML CSS | CodingNepal</title>
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  
+  <body>
+    <style>
+      /* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
   margin: 0;
   padding: 0;
-  background-color: #f6f6f6;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101D;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details .logo_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
   position: absolute;
+  top: 50%;
   right: 0;
-  min-width: 200px;
-  top: calc(100% + 15px);
-  display: none;
-  z-index: 1;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
-.header .links ul::before {
-  content: "";
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent transparent #f6f6f6 transparent;
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: white;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
   position: absolute;
-  right: 5px;
   top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
 }
-.header .links:hover ul {
-  display: block;
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.header .links ul li a {
-  display: block;
-  padding: 15px;
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar .nav-list li a i{
+color:white;
+}
+.sidebar input{
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #1d1b31;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar.open .bx-search:hover{
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar .bx-search:hover{
+  background: #FFF;
+  color: #11101d;
+}
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
   text-decoration: none;
-  color: #333;
-  transition: 0.3s;
+  transition: all 0.4s ease;
+  background: #11101D;
 }
-.header .links ul li a:hover {
-  padding-left: 25px;
+.sidebar li a:hover{
+  background: #FFF;
 }
-.header .links ul li:not(:last-child) a {
-  border-bottom: 1px solid #ddd;
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
 }
-.card1 {
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #11101D;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #1d1b31;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+.home-section{
+  position: relative;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+.fa-sign-in{
+  color:black;
+}
+.flexform{
+  display:flex;
+}
+.imgclass{
+  padding-top:100px;
+}
+.bbt{
+ background-color: #11101D;
+ color:white;
+}
+.red-color {
+        color:red;
+    }
+li a i{
+  color:white;
+}
+.tt{
+		margin-bottom:100px;
+	}
+    body {
+		margin-top: 5px;
+
+font-family: Arial, sans-serif;
+font-weight: bold;
+background: #2370ED 50%;
+    background: #DDE7F3 ;
+    margin: 0;
+		padding: 0;
+}
+
+  h1 {
+    color:black;  
+		text-align: center;
+		margin-top: 50px;
+		}
+  table {
+    
+			margin: auto;
+			border-collapse: collapse;
+			border-spacing: 0;
+			width: 50%;
+			border: 1px solid #ddd;
+			background-color: white;
+		}
+  th, td {
+			text-align: left;
+			padding: 16px;
+			border-bottom: 1px solid #ddd;
+		}
+  tr:nth-child(even) {
+			background-color: #f2f2f2
+		}
+
+  .circle {
+
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-image: url('https://www.w3schools.com/w3images/avatar2.png');
+      background-size: cover;
+      margin-left:auto; 
+      margin-right:auto;
+      margin-top:10px;
+  }
+ .ttt{
+  margin-top:40px;
+ }
+ .card1 {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 20%;
   background-color:white;
   margin-top:50px;
   margin-left:50px;
-
 }
-.footer {
-  background-color: #023e8a;
-  color: white;
-  padding: 30px 10px;
-  text-align: center;
-  font-size: 18px;
-}
-.footer span {
-  font-weight: bold;
-  color: var(--main-color);
-}
-.ff{
-}
-
 .card1:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
@@ -143,32 +572,68 @@ justify-content: flex-end;
 .mm{
   margin:30px;
 } 
-</style>
-</head>
-<body>
-   <!-- start header -->
-   <div class="header">
-    
-    <div class="container">
-        
-    <h2 class="co" >SIM</h2>
-      <img class="logo" src="iamge/logo.png" alt="">
-      <div class="links">
-        <span class="icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-        <ul>
-          <li><a href="{{Route("home")}}">Home</a></li>
-          <li><a href="{{Route("profile")}}">Profile</a></li>
-          <li><a href="{{Route("attendance")}}">My Attendance</a></li>
-        </ul>
+    </style>
+    <div class="sidebar">
+      <div class="logo-details">
+      <div class="logo_name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SIM</div>
+        <i class="bx bx-menu" id="btn"></i>
       </div>
+      <ul class="nav-list">
+       
+        
+     
+      
+        <li>
+          <a href="{{Route("myhome")}}">
+          <i class="fa-solid fa-house"></i>
+                                <span class="links_name">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+        <li>
+          <a href="{{Route("profile")}}">
+          <i class="fa-solid fa-user"></i>
+                            <span class="links_name">Profile</span>
+          </a>
+          <span class="tooltip">Profile</span>
+        </li>
+        <li>
+          <a href="{{Route("attendance")}}">
+          <i class="fa-solid fa-clipboard-user"></i>
+                      <span class="links_name">My Attendance</span>
+          </a>
+          <span class="tooltip">My Attendance</span>
+        </li>
+        <li>
+          <a href="{{Route("about")}}">
+          <i class="fa-sharp fa-solid fa-bookmark"></i>
+             <span class="links_name">About us</span>
+          </a>
+          <span class="tooltip">About us</span>
+        </li>
+        <li>
+          <a href="{{Route("contactlogin")}}">
+          <i class="fa-solid fa-address-book"></i>
+                <span class="links_name">Contact us</span>
+          </a>
+          <span class="tooltip">Contact us</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+               <div class="name_job">
+              <div class="name">John Doe</div>
+              <div class="job">Student</div>
+            </div>
+          </div>
+         <a href ="{{Route("signin")}}"><i class="bx bx-log-out" id="log_out"></i></a>
+        </li>
+      </ul>
+        
+        
+    
     </div>
-  </div>
-  <!-- End header -->
-  <h1>Semester 1 </h1>
+    <section class="home-section">
+    <h1>Semester 1 </h1>
 
 <div class="ff">
 
@@ -202,245 +667,40 @@ justify-content: flex-end;
 </div>
 
 </div>
-<h1>Semester 2 </h1>
 
-<div class="ff">
+    </section>
 
-<div class="card1">
-<img class="mm" src="/img/math.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Math 2</b></h4> 
-    <p>Gehan</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/ja.jpg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Computer Programming 2</b></h4> 
-    <p>Rasha Montaser</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/physics.png" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Physics 2</b></h4> 
-    <p>Mohamed Saaed</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/man.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>أساسيات إدارة</b></h4> 
-    <p>Mostafa Abdelhakim</p> 
-  </div>
-</div>
+    <script>
 
-</div>
-<h1>Semester 3 </h1>
+let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
 
-<div class="ff">
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();//calling the function(optional)
+});
 
-<div class="card1">
-<img class="mm" src="/img/math.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Math 3 </b></h4> 
-    <p>Abdelatif</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/ja.jpg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Software Engineering Theory</b></h4> 
-    <p>Rasha Montaser</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/gam.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Game Programming</b></h4> 
-    <p>Rasha Montaser</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/str.png" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Data Structure</b></h4> 
-    <p>Ashraf Saeed</p> 
-  </div>
-</div>
+searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
 
-</div>
-<h1>Semester 4 </h1>
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+ }
+}
 
-<div class="ff">
 
-<div class="card1">
-<img class="mm" src="/img/ana.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Software Req Analysis</b></h4> 
-    <p>Ghada Kadous</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/we.png" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Web Programming</b></h4> 
-    <p>Islam Elkabany</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/math.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Math 4</b></h4> 
-    <p>Abdelatif</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/ui.png" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>HCI</b></h4> 
-    <p>Nerimn Elkashif</p> 
-  </div>
-</div>
+    </script>
+    
 
-</div>
-<h1>Semester 5 </h1>
+   
 
-<div class="ff">
-
-<div class="card1">
-<img class="mm" src="/img/algo.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Algorithms</b></h4> 
-    <p>Ahmed Sherif</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/op.png" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Operating Systems</b></h4> 
-    <p>Ahmed Sherif</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/Multimedia.jpg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Adv Multi</b></h4> 
-    <p>Hatem Abdelkader</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/ui.png" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>User Interface Design</b></h4> 
-    <p>Shimaa Elmorsy</p> 
-  </div>
-</div>
-
-</div>
-<h1>Semester 6 </h1>
-
-<div class="ff">
-
-<div class="card1">
-<img class="mm" src="/img/mob.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Mobile</b></h4> 
-    <p>Mohamed Elkholy</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/clou.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Cloud</b></h4> 
-    <p>Mohamed Elkholy</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/nu.png" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Numerical Computions</b></h4> 
-    <p>Elsayed Mostafa</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/gam.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>AI For Games</b></h4> 
-    <p>Amira</p> 
-  </div>
-</div>
-
-</div>
-<h1>Semester 7 </h1>
-
-<div class="ff">
-
-<div class="card1">
-<img class="mm" src="/img/se.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Security</b></h4> 
-    <p>Mohamed Elkholy</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/ri.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Risk</b></h4> 
-    <p>Mohamed Elkholy</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/gg.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Computer Graphic</b></h4> 
-    <p>Nerimn Elkashif</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/ana.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Software Testing</b></h4> 
-    <p>Ghada Kadous</p> 
-  </div>
-</div>
-
-</div>
-<h1>Semester 8 </h1>
-
-<div class="ff">
-
-<div class="card1">
-<img class="mm" src="/img/ggg.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Graphic Programming</b></h4> 
-    <p>Hatem Abdelkader</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/gam.jpeg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Game Design</b></h4> 
-    <p>Amira</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/ne.png" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>Network</b></h4> 
-    <p>Emad Raouf</p> 
-  </div>
-</div>
-<div class="card2">
-<img class="mm" src="/img/mm.jpg" width="200" height="200" alt="College Image">
-  <div class="container">
-    <h4><b>أخلاقيات مهنة</b></h4> 
-    <p>سامح محمد الغنام</p> 
-  </div>
-</div>
-
-</div>   
-<div class="footer">&copy; SIM <span>Studens</span> All Right Reserved</div>
+    <div class="footer">&copy; SIM <span>Studens</span> All Right Reserved</div>
 
 </body>
-</html> 
+</html>

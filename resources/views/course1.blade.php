@@ -531,10 +531,57 @@ background: #2370ED 50%;
       margin-left:auto; 
       margin-right:auto;
       margin-top:10px;
+      display:none;
+  }
+  .med{
+    margin-right:750px;
   }
  .ttt{
   margin-top:40px;
  }
+ .card1 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 20%;
+  background-color:white;
+  margin-top:50px;
+  margin-left:50px;
+}
+.card1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 20%;
+  margin-left:50px;
+  background-color:white;
+  margin-top:50px;
+
+
+}
+
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.ff{
+  display:flex;
+  margin : 50px;
+}
+.mm{
+  margin:30px;
+}
+.course-section{
+	display: none;
+} 
+.tt{
+    margin-top:150px;
+}
 
     </style>
     <div class="sidebar">
@@ -547,40 +594,13 @@ background: #2370ED 50%;
         
      
       
-        <li>
-          <a href="{{Route("myhome")}}">
+       
+      <li>
+          <a href="{{Route("doctorhome")}}">
           <i class="fa-solid fa-house"></i>
-                                <span class="links_name">Home</span>
-          </a>
-          <span class="tooltip">Home</span>
-        </li>
-        <li>
-          <a href="{{Route("courses")}}">
-        <i class="fa-solid fa-book"></i>
-                            <span class="links_name">Courses</span>
+                                <span class="links_name">Courses</span>
           </a>
           <span class="tooltip">Courses</span>
-        </li>
-        <li>
-          <a href="{{Route("attendance")}}">
-          <i class="fa-solid fa-clipboard-user"></i>
-                      <span class="links_name">My Attendance</span>
-          </a>
-          <span class="tooltip">My Attendance</span>
-        </li>
-        <li>
-          <a href="{{Route("about")}}">
-          <i class="fa-sharp fa-solid fa-bookmark"></i>
-             <span class="links_name">About us</span>
-          </a>
-          <span class="tooltip">About us</span>
-        </li>
-        <li>
-          <a href="{{Route("contactlogin")}}">
-          <i class="fa-solid fa-address-book"></i>
-                <span class="links_name">Contact us</span>
-          </a>
-          <span class="tooltip">Contact us</span>
         </li>
         <li class="profile">
           <div class="profile-details">
@@ -598,40 +618,74 @@ background: #2370ED 50%;
     </div>
     <section class="home-section">
     <div class="tt">
-    <h1 >Your Profile</h1>
+    <h1 class="med">Students</h1>
     <div class="circle"></div>
-	<table class="ttt">
-	  <tr>
-	    <th>Name:</th>
-	    <td>John Doe</td>
-	  </tr>
-	  <tr>
-	    <th>Uni ID:</th>
-	    <td>1234567</td>
-	  </tr>
-	  <tr>
-	    <th>Gender:</th>
-	    <td>Male</td>
-	  </tr>
-	  <tr>
-	    <th>University Email:</th>
-	    <td>johndoe@alexu.edu.eg</td>
-	  </tr>
+    <table class="ttt">
+      <tr>
+        <th>Name:</th>
+        <th>ID</th>
+      </tr>
+      <tr>
+        <th>Mohamed Saber</th>
+        <td>203117</td>
+      </tr>
+      <tr>
+        <th>Ammar Rekaby</th>
+        <td>203052</td>
+      </tr>
+      <tr>
+        <th>Eyad Hamdi</th>
+        <td>203015</td>
+      </tr>
+
     <tr>
-	    <th>Mobile num:</th>
-	    <td>+20 1115845115</td>
-	  </tr>
-    <tr>
-	    <th>National ID:</th>
-	    <td>30102010115213</td>
-	  </tr>
-    <tr>
-	</table>
+    </table>
 </div>
 
-    </section>
+<style>
+    .med{
+        margin-left  :650px;
+    }
+    table {
+            margin: auto;
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 50%;
+            border: 1px solid #ddd;
+            background-color: white;
+        }
+  th, td {
+            text-align: left;
+            padding: 16px;
+            border-bottom: 1px solid #ddd;
+        }
+  tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+</style>
+		</section>
 
     <script>
+      const courseLinks = document.querySelectorAll('.container');
+const courseSections = document.querySelectorAll('.course-section');
+
+for(let i = 0; i < courseLinks.length; i++) {
+courseLinks[i].addEventListener('click', function(event) {
+event.preventDefault();
+const selectedCourse = this.getAttribute('data-course');
+showCourse(selectedCourse);
+});
+}
+
+function showCourse(course) {
+for(let i = 0; i < courseSections.length; i++) {
+if(courseSections[i].getAttribute('id') === course) {
+courseSections[i].style.display = 'block';
+} else {
+courseSections[i].style.display = 'none';
+}
+}
+}
 
 let sidebar = document.querySelector(".sidebar");
 let closeBtn = document.querySelector("#btn");

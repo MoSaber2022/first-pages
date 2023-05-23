@@ -27,7 +27,11 @@ Route::get('/signuppage', [App\Http\Controllers\HomeController::class, 'signuppa
 Route::get('/myhome', [App\Http\Controllers\HomeController::class, 'myhome'])->name('myhome');
 Route::get('/courses', [App\Http\Controllers\HomeController::class, 'courses'])->name('courses');
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
+Route::get('/breifabout', [App\Http\Controllers\HomeController::class, 'breifabout'])->name('breifabout');
 Route::get('/doctorhome', [App\Http\Controllers\HomeController::class, 'doctor'])->name('doctorhome');
+Route::get('/contactus', [App\Http\Controllers\HomeController::class, 'contactus'])->name('contactus');
+Route::get('/contactlogin', [App\Http\Controllers\HomeController::class, 'contactlogin'])->name('contactlogin');
+Route::get('/course1', [App\Http\Controllers\HomeController::class, 'course1'])->name('course1');
 
 
 

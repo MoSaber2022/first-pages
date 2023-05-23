@@ -535,7 +535,63 @@ background: #2370ED 50%;
  .ttt{
   margin-top:40px;
  }
+ .about-us{
+  height: 100vh;
+  width: 100%;
+  padding: 90px 0;
+  background: #ddd;
+}
+.pic{
+  height: auto;
+  width:  302px;
+}
+.about{
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text{
+  width: 540px;
+}
+.text h2{
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
 
+}
+.text h5{
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+span{
+  color: #4070f4;
+}
+.text p{
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.data{
+  margin-top: 30px;
+}
+.hire{
+  font-size: 18px;
+  background: black;
+  color:white;
+  text-decoration: none;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.hire:hover{
+  background: #000;
+  border: 1px solid #4070f4;
+}
     </style>
     <div class="sidebar">
       <div class="logo-details">
@@ -547,87 +603,46 @@ background: #2370ED 50%;
         
      
       
-        <li>
-          <a href="{{Route("myhome")}}">
-          <i class="fa-solid fa-house"></i>
-                                <span class="links_name">Home</span>
+      <li>
+          <a href="{{Route("signuppage")}}">
+          <i class="fa-solid fa-right-to-bracket"></i>          
+            <span class="links_name">Sign up</span>
           </a>
-          <span class="tooltip">Home</span>
+          <span class="tooltip">Sign up</span>
         </li>
         <li>
-          <a href="{{Route("courses")}}">
-        <i class="fa-solid fa-book"></i>
-                            <span class="links_name">Courses</span>
+          <a href="{{Route("signin")}}">
+          <i class="fa-solid fa-right-to-bracket"></i>          
+            <span class="links_name">Login</span>
           </a>
-          <span class="tooltip">Courses</span>
+          <span class="tooltip">Login</span>
         </li>
         <li>
-          <a href="{{Route("attendance")}}">
-          <i class="fa-solid fa-clipboard-user"></i>
-                      <span class="links_name">My Attendance</span>
-          </a>
-          <span class="tooltip">My Attendance</span>
-        </li>
-        <li>
-          <a href="{{Route("about")}}">
-          <i class="fa-sharp fa-solid fa-bookmark"></i>
-             <span class="links_name">About us</span>
-          </a>
-          <span class="tooltip">About us</span>
-        </li>
-        <li>
-          <a href="{{Route("contactlogin")}}">
+          <a href="{{Route("contactus")}}">
           <i class="fa-solid fa-address-book"></i>
                 <span class="links_name">Contact us</span>
           </a>
           <span class="tooltip">Contact us</span>
         </li>
-        <li class="profile">
-          <div class="profile-details">
-               <div class="name_job">
-              <div class="name">John Doe</div>
-              <div class="job">Student</div>
-            </div>
-          </div>
-         <a href ="{{Route("signin")}}"><i class="bx bx-log-out" id="log_out"></i></a>
-        </li>
+        
       </ul>
         
         
     
     </div>
     <section class="home-section">
-    <div class="tt">
-    <h1 >Your Profile</h1>
-    <div class="circle"></div>
-	<table class="ttt">
-	  <tr>
-	    <th>Name:</th>
-	    <td>John Doe</td>
-	  </tr>
-	  <tr>
-	    <th>Uni ID:</th>
-	    <td>1234567</td>
-	  </tr>
-	  <tr>
-	    <th>Gender:</th>
-	    <td>Male</td>
-	  </tr>
-	  <tr>
-	    <th>University Email:</th>
-	    <td>johndoe@alexu.edu.eg</td>
-	  </tr>
-    <tr>
-	    <th>Mobile num:</th>
-	    <td>+20 1115845115</td>
-	  </tr>
-    <tr>
-	    <th>National ID:</th>
-	    <td>30102010115213</td>
-	  </tr>
-    <tr>
-	</table>
-</div>
+    <div class="about">
+      <!--<img src="girl.png" class="pic">-->
+      <div class="text">
+        <h2 style="color: black;">About Us</h2>
+        <h5>SIM Registration <span>Website</span></h5>
+          <p>The Department of SIM is a unique group of faculty, visiting researchers, students and educational programs that provide a world-class research environment that goes well beyond the core areas of computer science</p>
+
+  <br>
+         <p > Computer science is the study of computers and computing, including their theoretical and algorithmic foundations, hardware and software, and their uses for processing information!</p>
+        
+      </div>
+    </div>
 
     </section>
 
